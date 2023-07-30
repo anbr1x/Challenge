@@ -17,7 +17,7 @@ Al finalizar cada conversión, el programa te preguntará si deseas continuar ej
 ## Instalación y Uso
 
 1. Clona el repositorio desde GitHub:
-git clone https://github.com/tu_usuario/convertidor-de-monedas.git
+git clone https://github.com/anbr1x/Challenge.git
 
 2. Compila el proyecto: javac *.java
 
