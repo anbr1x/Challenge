@@ -1,0 +1,9 @@
+import javax.swing.JOptionPane;
+
+public class Input {
+	String CantidadConvertirStr = "";
+	public void MostrarDisplay(){
+	String CantidadConvertirStr =
+            JOptionPane.showInputDialog("Ingresa la cantidad de dinero que deseas convertir");
+
+}}

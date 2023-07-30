@@ -1,0 +1,11 @@
+import javax.swing.JOptionPane;
+
+public class Inicio {
+	//Selecionar Tempertura o Monedas
+	public String MostrarDisplay(){
+    String selectedValue = (String) JOptionPane.showInputDialog(null,
+            "Seleccione una opción de conversion", "Menu",
+            JOptionPane.INFORMATION_MESSAGE, null,
+            Convertir.possibleValues, Convertir.possibleValues[0]);
+    return selectedValue;
+}}

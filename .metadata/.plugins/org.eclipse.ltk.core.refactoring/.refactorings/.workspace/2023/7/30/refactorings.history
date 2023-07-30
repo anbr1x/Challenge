@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;java4-excepciones-clase-5&apos;" deleteContents="false" description="Delete resource &apos;java4-excepciones-clase-5&apos;" element1="/java4-excepciones-clase-5" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1690674033248"/>&#x0A;<refactoring comment="Delete resource &apos;java-herencia-polimorfismo-clase-6&apos;" deleteContents="false" description="Delete resource &apos;java-herencia-polimorfismo-clase-6&apos;" element1="/java-herencia-polimorfismo-clase-6" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1690674035928"/>
+</session>

@@ -1,0 +1,52 @@
+
+public class cambio {
+     public String SimbolMoneda = " ";
+     public float FactordeCambio;
+     public String MonedaConvertida = " ";
+
+     public Object[] Conversion(String Cambioto) {
+         // Aquie el switch case
+    	 switch (Cambioto) {
+    	    case "De Soles a Dólar":
+    	    	MonedaConvertida = "Dolares";
+    	        SimbolMoneda = "$";
+    	        FactordeCambio = (float) 0.27477514;
+    	        break;
+    	    case "De Soles a Euro":
+    	    	MonedaConvertida = "Euro";
+    	        SimbolMoneda = "€";
+    	        FactordeCambio = (float) 0.25300141;
+    	        break;
+    	    case "De Soles a Libras":
+    	    	MonedaConvertida = "Libras";
+    	        SimbolMoneda = "£";
+    	        FactordeCambio = (float) 0.21701829;
+    	        break;
+    	    case "De Soles a Yen":
+    	        System.out.println("Jueves");
+    	        break;
+    	    case "De Soles a Won Coreano":
+    	        System.out.println("Viernes");
+    	        break;
+    	    case "De Dólar a Soles":
+    	        System.out.println("Sábado");
+    	        break;
+    	    case "De Euro a Soles":
+    	        System.out.println("Domingo");
+    	        break;
+    	    case "De Libras a Soles":
+    	    	break;
+    	    case "De Yen a Soles":
+    	    	break;
+    	    case "De Won Coreano a Soles":
+    	    	break;
+    	    default:
+    	        System.out.println("Valor inválido");
+    	}
+    	 
+    	 
+    	 return new Object[] {SimbolMoneda, FactordeCambio, MonedaConvertida};
+       
+
+}
+}

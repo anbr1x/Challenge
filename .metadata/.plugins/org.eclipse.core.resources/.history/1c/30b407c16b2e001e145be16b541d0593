@@ -1,0 +1,8 @@
+import javax.swing.JOptionPane;
+
+public class Resultado {
+	public void MostrarDisplay(Object DatosdeConversion, String CanitidadConvertidaRendondeado ){
+		 String mensaje = String.format("Tienes %s %s %s", 
+	    		 (String) DatosdeConversion[0], CanitidadConvertidaRendondeado, (String) DatosdeConversion[2]);
+	     JOptionPane.showMessageDialog(null, mensaje, "alert", JOptionPane.INFORMATION_MESSAGE);
+	}}

@@ -1,0 +1,11 @@
+import javax.swing.JOptionPane;
+
+public class SeleccionTipodeCambio {
+	
+	public void MostrarDisplay(){
+	String CambioSelected = " ";
+	 Object CambioSelected = JOptionPane.showInputDialog(null,
+             "Elija la moneda a la que deseas convertir tu dinero", "Monedas",
+             JOptionPane.INFORMATION_MESSAGE, null,
+             Convertir.TiposDcambio, Convertir.TiposDcambio[0]);
+}}

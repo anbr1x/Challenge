@@ -1,0 +1,49 @@
+import java.awt.Component; 
+import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
+
+public class test0 {
+	public static void main(String[] args) {
+		
+		float cantidadDb = 0;
+		do {
+		    Inicio inicio = new Inicio();
+		    inicio.MostrarDisplay();
+		    // Ingresa Cantidad a convertir
+		    Input Digitacant = new Input();
+		    Digitacant
+		    try {
+		        cantidadDb = Float.parseFloat(CantidadConvertirStr);
+		        // Si no se produce la excepción, salimos del bucle
+		        break;
+		    } catch (NumberFormatException ex) {
+		        JOptionPane.showMessageDialog(null, "Valor no válido", "alert", JOptionPane.INFORMATION_MESSAGE);
+		    }
+		} while (true);
+
+		
+		 // Escoje el tipo de cambio
+		 Object CambioSelected = JOptionPane.showInputDialog(null,
+	             "Elija la moneda a la que deseas convertir tu dinero", "Monedas",
+	             JOptionPane.INFORMATION_MESSAGE, null,
+	             Convertir.TiposDcambio, Convertir.TiposDcambio[0]);
+		 // Convierte
+		 cambio C = new cambio();
+		 Object[] DatosdeConversion = C.Conversion(CambioSelected.toString());
+		 float FactorConversion = (float) DatosdeConversion[1];
+		 float CanitidadConvertida = cantidadDb * FactorConversion;
+		 //redondeo
+		 DecimalFormat df = new DecimalFormat("0.00");
+		 
+		 String CanitidadConvertidaRendondeado = df.format(CanitidadConvertida);
+		 //Mostrar Resultado
+		 
+	     String mensaje = String.format("Tienes %s %s %s", 
+	    		 (String) DatosdeConversion[0], CanitidadConvertidaRendondeado, (String) DatosdeConversion[2]);
+
+		 JOptionPane.showMessageDialog(null, mensaje, "alert", JOptionPane.INFORMATION_MESSAGE);
+		 
+	}
+}
+	
+	

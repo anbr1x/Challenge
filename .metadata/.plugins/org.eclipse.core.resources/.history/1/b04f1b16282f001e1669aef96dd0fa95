@@ -1,0 +1,85 @@
+import java.text.DecimalFormat;
+
+import javax.swing.JOptionPane;
+
+public class cambio {
+     public String SimbolMoneda = " ";
+     public float ValorConvertido;
+     public String MonedaConvertida = " ";
+
+     public  void  Conversion(String Cambioto, Float cantidad) {
+         // Aquie el switch case
+    	 switch (Cambioto) {
+    	    case "De Soles a Dólar":
+    	    	MonedaConvertida = "Dolares";
+    	        SimbolMoneda = "$";
+    	        ValorConvertido = cantidad*(float) 0.27477514;
+    	        break;
+    	    case "De Soles a Euro":
+    	    	MonedaConvertida = "Euros";
+    	        SimbolMoneda = "€";
+    	        ValorConvertido = cantidad*(float) 0.25300141;
+    	        break;
+    	    case "De Soles a Libra":
+    	    	MonedaConvertida = "Libras";
+    	        SimbolMoneda = "£";
+    	        ValorConvertido = cantidad*(float) 0.21701829;
+    	        break;
+    	    case "De Soles a Yen":
+    	    	MonedaConvertida = "Yenes";
+    	        SimbolMoneda = "£";
+    	        ValorConvertido = cantidad*(float) 39.356357;
+    	        break;
+    	    case "De Soles a Won Coreano":
+    	    	MonedaConvertida = "Wones Coreanos";
+    	        SimbolMoneda = "₩";
+    	        ValorConvertido = cantidad*(float) 355.05115 ;
+    	        break;
+    	    case "De Dólar a Soles":
+    	    	MonedaConvertida = "Soles";
+    	        SimbolMoneda = "S/";
+    	        ValorConvertido = cantidad*(float) 3.5869993;
+    	        break;
+    	    case "De Euro a Soles":
+    	    	MonedaConvertida = "Soles";
+    	        SimbolMoneda = "S/";
+    	        ValorConvertido = cantidad*(float) 3.9548752;
+    	        break;
+    	    case "De Libras a Soles":
+    	    	MonedaConvertida = "Soles";
+    	        SimbolMoneda = "S/";
+    	        ValorConvertido = cantidad*(float) 4.6077171;
+    	    	break;
+    	    case "De Yen a Soles":
+    	    	MonedaConvertida = "Soles";
+    	        SimbolMoneda = "S/";
+    	        ValorConvertido = cantidad*(float) 0.025408856;
+    	    	break;
+    	    case "De Won Coreano a Soles":
+    	    	MonedaConvertida = "Soles";
+    	        SimbolMoneda = "S/";
+    	        ValorConvertido = cantidad*(float) 0.0028164956;
+    	    	break;
+    	    default:
+    	        System.out.println("Valor inválido");
+    	}
+		 DecimalFormat df = new DecimalFormat("0.00");
+		 String ValorConvertidoStr = df.format(ValorConvertido);
+    	 String mensaje = String.format("Tienes %s %s %s", 
+    			 ValorConvertidoStr,MonedaConvertida, SimbolMoneda);
+	     JOptionPane.showMessageDialog(null, mensaje, "alert", JOptionPane.INFORMATION_MESSAGE);
+}
+
+	public String getSimbolMoneda() {
+		return SimbolMoneda;
+	}
+
+
+	}
+
+
+	public String getMonedaConvertida() {
+		return MonedaConvertida;
+	}
+}
+
