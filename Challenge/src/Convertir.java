@@ -5,4 +5,10 @@ public class Convertir {
 			 "De Soles a Yen", "De Soles a Won Coreano", 
 			 "De Dólar a Soles", "De Euro a Soles","De Libras a Soles",
 			 "De Yen a Soles", "De Won Coreano a Soles"};
+	 static String[] TiposDcambioT = {    "Celsius a Fahrenheit",
+			    "Celsius a Kelvin",
+			    "Fahrenheit a Celsius",
+			    "Fahrenheit a Kelvin",
+			    "Kelvin a Celsius",
+			    "Kelvin a Fahrenheit"};
 }

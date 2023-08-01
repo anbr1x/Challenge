@@ -3,82 +3,125 @@ import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 public class cambio {
-     public String SimbolMoneda = " ";
+     public String convertidoa = " ";
      public float ValorConvertido;
-     public String MonedaConvertida = " ";
+     public String Caracter = " ";
 
      public  void  Conversion(String Cambioto, Float cantidad) {
          // Aquie el switch case
     	 switch (Cambioto) {
     	    case "De Soles a Dólar":
-    	    	MonedaConvertida = "Dolares";
-    	        SimbolMoneda = "$";
+    	    	convertidoa = "Dolares";
+    	        Caracter = "$";
     	        ValorConvertido = cantidad*(float) 0.27477514;
     	        break;
     	    case "De Soles a Euro":
-    	    	MonedaConvertida = "Euros";
-    	        SimbolMoneda = "€";
+    	    	convertidoa = "Euros";
+    	        Caracter = "€";
     	        ValorConvertido = cantidad*(float) 0.25300141;
     	        break;
     	    case "De Soles a Libra":
-    	    	MonedaConvertida = "Libras";
-    	        SimbolMoneda = "£";
+    	    	convertidoa = "Libras";
+    	        Caracter = "£";
     	        ValorConvertido = cantidad*(float) 0.21701829;
     	        break;
     	    case "De Soles a Yen":
-    	    	MonedaConvertida = "Yenes";
-    	        SimbolMoneda = "£";
+    	    	convertidoa = "Yenes";
+    	        Caracter = "£";
     	        ValorConvertido = cantidad*(float) 39.356357;
     	        break;
     	    case "De Soles a Won Coreano":
-    	    	MonedaConvertida = "Wones Coreanos";
-    	        SimbolMoneda = "₩";
+    	    	convertidoa = "Wones Coreanos";
+    	        Caracter = "₩";
     	        ValorConvertido = cantidad*(float) 355.05115 ;
     	        break;
     	    case "De Dólar a Soles":
-    	    	MonedaConvertida = "Soles";
-    	        SimbolMoneda = "S/";
+    	    	convertidoa = "Soles";
+    	        Caracter = "S/";
     	        ValorConvertido = cantidad*(float) 3.5869993;
     	        break;
     	    case "De Euro a Soles":
-    	    	MonedaConvertida = "Soles";
-    	        SimbolMoneda = "S/";
+    	    	convertidoa = "Soles";
+    	        Caracter = "S/";
     	        ValorConvertido = cantidad*(float) 3.9548752;
     	        break;
     	    case "De Libras a Soles":
-    	    	MonedaConvertida = "Soles";
-    	        SimbolMoneda = "S/";
+    	    	convertidoa = "Soles";
+    	        Caracter = "S/";
     	        ValorConvertido = cantidad*(float) 4.6077171;
     	    	break;
     	    case "De Yen a Soles":
-    	    	MonedaConvertida = "Soles";
-    	        SimbolMoneda = "S/";
+    	    	convertidoa = "Soles";
+    	        Caracter = "S/";
     	        ValorConvertido = cantidad*(float) 0.025408856;
     	    	break;
     	    case "De Won Coreano a Soles":
-    	    	MonedaConvertida = "Soles";
-    	        SimbolMoneda = "S/";
+    	    	convertidoa = "Soles";
+    	        Caracter = "S/";
     	        ValorConvertido = cantidad*(float) 0.0028164956;
     	    	break;
+    	    	// Convertir de Celsius a Fahrenheit
+    	    case "Celsius a Fahrenheit":
+    	        convertidoa = "Fahrenheit";
+    	        Caracter = "°F";
+    	        ValorConvertido = (cantidad * 9/5) + 32;
+    	        break;
+
+    	    // Convertir de Celsius a Kelvin
+    	    case "Celsius a Kelvin":
+    	        convertidoa = "Kelvin";
+    	        Caracter = "°C";
+    	        ValorConvertido = (float) (cantidad + 273.15);
+    	        break;
+
+    	    // Convertir de Fahrenheit a Celsius
+    	    case "Fahrenheit a Celsius":
+    	        convertidoa = "Celsius";
+    	        Caracter = "°F";
+    	        ValorConvertido = (cantidad - 32) * 5/9;
+    	        break;
+
+    	    // Convertir de Fahrenheit a Kelvin
+    	    case "Fahrenheit a Kelvin":
+    	        convertidoa = "Kelvin";
+    	        Caracter = "°F";
+    	        ValorConvertido = (float) ((cantidad - 32) * 5/9 + 273.15);
+    	        break;
+
+    	    // Convertir de Kelvin a Celsius
+    	    case "Kelvin a Celsius":
+    	        convertidoa = "Celsius";
+    	        Caracter = "K";
+    	        ValorConvertido = (float) (cantidad - 273.15);
+    	        break;
+
+    	    // Convertir de Kelvin a Fahrenheit
+    	    case "Kelvin a Fahrenheit":
+    	        convertidoa = "Fahrenheit";
+    	        Caracter = "K";
+    	        ValorConvertido = (float) ((cantidad - 273.15) * 9/5 + 32);
+    	        break;
+
     	    default:
     	        System.out.println("Valor inválido");
     	}
 		 DecimalFormat df = new DecimalFormat("0.00");
 		 String ValorConvertidoStr = df.format(ValorConvertido);
-    	 String mensaje = String.format("Tienes %s %s %s", 
-    			 ValorConvertidoStr,SimbolMoneda,MonedaConvertida );
+		 
+    	 String mensaje = String.format("Son %s %s %s", 
+    			 ValorConvertidoStr,Caracter,convertidoa );
 	     JOptionPane.showMessageDialog(null, mensaje, "alert", JOptionPane.INFORMATION_MESSAGE);
 }
 
 	public String getSimbolMoneda() {
-		return SimbolMoneda;
+		return Caracter;
 	}
 
 
 
 
 	public String getMonedaConvertida() {
-		return MonedaConvertida;
+		return convertidoa;
 	}
 }
 
